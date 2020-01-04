@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan 2</title>
+</head>
+<body>
+    <div class="box">
+        <h2>Latihan 2</h2>
+
+        <code>Ismail berangkat dari rumah menuju ke kantor yang berjarak 64,5km dengan kecepatan 3 m/detik. Tetapi setelah 23 menit kemudian, kecepatan menjadi 5 m/detik. Demikian setelah 12 menit berikutnya kecepatan konstan dengan lebih lambat 3 m/detik dibandingkan 23 menit sebelumnya. Buatlah suatu program untuk menghitung dan mengetahui berapa lama Ismail menempuh perjalanan dalam format Jam, Menit dan Detik dari rumah menuju ke kantornya.</code><br><br>
+        
+        <table>
+            <tr>
+                <td>Waktu Ismail menuju kantor</td>
+                <td>:</td>
+                <td><span id="jam"></span> Detik</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded',           function(){
+            var jarakTempuh = 64.5
+            var waktu = [3,5,3]
+            var sum = 0;
+            for( var i = 0; i < waktu.length; i++ ){
+                sum += parseInt( waktu[i], 10 );
+            }
+            var KecRataRata = sum/waktu.length;
+            
+            var waktuTempuh = jarakTempuh/KecRataRata
+            var res = waktuTempuh.toString().substr(1, 5).replace('.', '');
+
+            
+            var sec_num = parseInt(res);
+
+            var hours   = Math.floor(sec_num / 3600);
+            var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+            var seconds = sec_num - (hours * 3600) - (minutes * 60);
+
+            if (hours   < 10) {hours   = "0"+hours;}
+            if (minutes < 10) {minutes = "0"+minutes;}
+            if (seconds < 10) {seconds = "0"+seconds;}
+            document.getElementById("jam").innerHTML = hours + ':' + minutes + ':' + seconds;
+            // alert( hours + ':' + minutes + ':' + seconds)
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan 3</title>
+</head>
+<body>
+    <div class="box">
+        <h2>Latihan 3</h2>
+
+        <code>
+            Diketahui sebuah array seperti berikut:
+        </code>
+        <table border="1" cellspacing="0" cellpadding="5">
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>u</td>
+                <td>W</td>
+                <td>d</td>
+                <td>o</td>
+                <td>b</td>
+                <td>d</td>
+                <td>D</td>
+                <td>s</td>
+                <td>y</td>
+                <td>m</td>
+                <td>i</td>
+                <td>t</td>
+                <td>a</td>
+            </tr>
+        </table>
+<br>
+            <code>
+                Susun lah array berikut menjadi “DumbWaysdotid” dengan menggunakan metode Bubble sort.
+            .</code><br><br>
+        
+        <table>
+            <tr>
+                <td>Waktu Ismail menuju kantor</td>
+                <td>:</td>
+                <td><span id="jam"></span> Detik</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded',           function(){
+            var jarakTempuh = 64.5
+            var waktu = [3,5,3]
+            var sum = 0;
+            for( var i = 0; i < waktu.length; i++ ){
+                sum += parseInt( waktu[i], 10 );
+            }
+            var KecRataRata = sum/waktu.length;
+            
+            var waktuTempuh = jarakTempuh/KecRataRata
+            var res = waktuTempuh.toString().substr(1, 5).replace('.', '');
+
+            
+            var sec_num = parseInt(res);
+
+            var hours   = Math.floor(sec_num / 3600);
+            var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+            var seconds = sec_num - (hours * 3600) - (minutes * 60);
+
+            if (hours   < 10) {hours   = "0"+hours;}
+            if (minutes < 10) {minutes = "0"+minutes;}
+            if (seconds < 10) {seconds = "0"+seconds;}
+            document.getElementById("jam").innerHTML = hours + ':' + minutes + ':' + seconds;
+            // alert( hours + ':' + minutes + ':' + seconds)
+
+        });
+    </script>
+</body>
+</html>

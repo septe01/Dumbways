@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan 1</title>
+</head>
+<body>
+    <div class="box">
+        <h2>Latihan 1</h2>
+
+        <code>Di suatu penangkaran terdapat 9.999 kura-kura berjenis sulcatar. Setiap 90 hari kura-kura tersebut serempak melahirkan satu kura-kura baru. Namun sebelum melahirkan, 21,1% dari kura-kura tersebut mati. Buatkan lah sebuah program untuk menghitung dan mengetahui jumlah kura-kura setelah 365 hari.</code><br><br>
+        
+        <table>
+            
+            <tr>
+                <td>Sisa Kura kura yang mati /90 hari </td>
+                <td>:</td>
+                <td><span id="mati"></span> Ekor</td>
+            </tr>
+            <tr>
+                <td>jumlah kura-kura setelah 365 hari </td>
+                <td>:</td>
+                <td><span id="jmlh"></span> Ekor</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded',           function(){
+            var kura =  9999;
+            var anakan = 90;
+            var mati = 21.1;
+
+            var totalHari = 360;
+
+            var sisaKuraKuraMati = kura-mati*100;
+            var totalKuraKura = (totalHari/anakan)*sisaKuraKuraMati
+            document.getElementById("mati").innerHTML = sisaKuraKuraMati;
+            document.getElementById("jmlh").innerHTML = totalKuraKura;
+            // alert(totalKuraKura)
+
+
+        });
+    </script>
+</body>
+</html>
