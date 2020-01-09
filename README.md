@@ -9,3 +9,6 @@
 ![soal 5 select where](https://user-images.githubusercontent.com/30195561/71767586-2eee4100-2f40-11ea-8384-ae4d2f35db17.png)
 ![soal update query](https://user-images.githubusercontent.com/30195561/71767587-34e42200-2f40-11ea-87c2-2c825f822416.png)
 ![soal 5 gabungan](https://user-images.githubusercontent.com/30195561/71767590-3ada0300-2f40-11ea-8fde-c9f1b8c29f71.png)
+
+
+![00000PORTRAIT_00000_BURST20190829164611665](https://user-images.githubusercontent.com/30195561/72038325-99520900-32d3-11ea-8a32-c822f58bee70.jpg)
